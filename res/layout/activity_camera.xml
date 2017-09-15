@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@+id/fram"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.yongyida.robot.voice.camera.preview.CameraSurfaceView
+                android:id="@+id/camera_textureview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <com.yongyida.robot.voice.camera.preview.FaceView
+                android:id="@+id/face_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/camera_imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onBackBtClk"
+        android:src="@drawable/iv_back_selector" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.yongyida.robot.voice.camera.preview.CircleImageView
+            android:id="@+id/iv_album"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_take_picture"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/iv_take_picture_selector" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
